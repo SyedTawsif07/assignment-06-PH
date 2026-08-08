@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Products from '../UI/Products';
+import Card from '../UI/Card';
 
 const PremiumDigi = () => {
+    const [active, setActive] = useState("products");
     return (
         <div>
-            <div>
-                <h1>Premium Digital Tools</h1>
-                <p>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
+            <div className='container mx-auto text-center space-y-3 my-13'>
+                <h1 className='text-4xl font-bold'>Premium Digital Tools</h1>
+                <p className='text-gray-500'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
+                <div className='flex items-center border border-gray-200 rounded-full max-w-fit mx-auto justify-center my-5'>
+                    <button
+                        onClick={() => setActive('products')}
+                        className={`btn border-0 rounded-3xl ${active === "products" ? 'bg-linear-to-r from-[#4F39F6] to-purple-600 text-white' : 'btn'}`}>Products</button>
+                    <button
+                        onClick={() => setActive('cart')}
+                        className={`btn border-0 rounded-3xl ${active === "cart" ? 'bg-linear-to-r from-[#4F39F6] to-purple-600 text-white' : 'btn'}`}>Cart</button>
+                </div>
+                {
+                    active === "products" ? <Products></Products> : <Card></Card>
+                }
             </div>
         </div>
     );
