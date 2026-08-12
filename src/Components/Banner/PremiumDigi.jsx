@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Products from '../UI/Products';
 import Card from '../UI/Card';
+import AvailalableProducts from './AvailalableProducts';
 
-const PremiumDigi = () => {
+const PremiumDigi = ({ promiseFetchProducts }) => {
     const [active, setActive] = useState("products");
     return (
         <div>
@@ -18,7 +19,7 @@ const PremiumDigi = () => {
                         className={`btn border-0 rounded-3xl ${active === "cart" ? 'bg-linear-to-r from-[#4F39F6] to-purple-600 text-white' : 'btn'}`}>Cart</button>
                 </div>
                 {
-                    active === "products" ? <Products></Products> : <Card></Card>
+                    active === "products" ? <AvailalableProducts promiseFetchProducts={promiseFetchProducts}></AvailalableProducts> : <Card></Card>
                 }
             </div>
         </div>
