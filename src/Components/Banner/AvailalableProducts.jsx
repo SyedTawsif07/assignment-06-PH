@@ -6,7 +6,7 @@ const AvailalableProducts = ({ promiseFetchProducts }) => {
 
     return (
         <div>
-            <div className='space-y-3 grid grid-cols-3 gap-4'>
+            <div className='space-y-3 grid grid-cols-3 gap-4 max-w-[1200px] mx-auto'>
                 {
                     products.map(product => <Products product={product}></Products>)
                 }
