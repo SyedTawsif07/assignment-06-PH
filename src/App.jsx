@@ -10,9 +10,7 @@ const fetchProducts = async () => {
   return res.json();
 }
 function App() {
-
   const promiseFetchProducts = fetchProducts();
-
   return (
     <>
       <Navbar></Navbar>

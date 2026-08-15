@@ -12,7 +12,8 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "PenTool"
+    "icon": "PenTool",
+    "image": "writing"
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@
       "Monthly updates",
       "Commercial license"
     ],
-    "icon": "FileText"
+    "icon": "FileText",
+    "image": "design"
   },
   {
     "id": 3,
@@ -42,7 +44,8 @@
       "Commercial use",
       "No attribution"
     ],
-    "icon": "Palette"
+    "icon": "Palette",
+    "image": "stock"
   },
   {
     "id": 4,
@@ -57,7 +60,8 @@
       "API access",
       "Custom workflows"
     ],
-    "icon": "Megaphone"
+    "icon": "Megaphone",
+    "image": "automation"
   },
   {
     "id": 5,
@@ -72,7 +76,8 @@
       "ATS optimization",
       "Export to PDF"
     ],
-    "icon": "Image"
+    "icon": "Image",
+    "image": "resume"
   },
   {
     "id": 6,
@@ -87,6 +92,7 @@
       "Scheduler included",
       "React templates"
     ],
-    "icon": "Code2"
+    "icon": "Code2",
+    "image": "social"
   }
 ]
