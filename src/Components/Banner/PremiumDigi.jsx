@@ -3,11 +3,9 @@ import Products from '../UI/Products';
 import Card from '../UI/Card';
 import AvailalableProducts from './AvailalableProducts';
 
-const PremiumDigi = ({ promiseFetchProducts }) => {
+const PremiumDigi = ({ promiseFetchProducts, selectedProducts, setSelectedProducts }) => {
     const productData = use(promiseFetchProducts);
     const [active, setActive] = useState("products");
-    const [cart, setCart] = useState([]);
-    const [selectedProducts, setSelectedProducts] = useState([]);
     return (
         <div>
             <div className='container mx-auto text-center space-y-3 my-13'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ selectedProducts }) => {
     return (
         <header>
             <nav className='flex justify-around items-center p-5 border-b border-gray-200'>
@@ -14,9 +14,12 @@ const Navbar = () => {
                     <li><a href="/">FAQ</a></li>
                 </ul>
                 <div className='flex items-center gap-5'>
-                    <button className='hover:cursor-pointer'>
-                        <FaShoppingCart></FaShoppingCart>
-                    </button>
+                    <div className='relative'>
+                        <button>
+                            <FaShoppingCart></FaShoppingCart>
+                        </button>
+                        <span className='absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold rounded-full min-w-5 h-5 flex items-center justify-center px-1'>{selectedProducts.length}</span>
+                    </div>
                     <button className='btn'>Login</button>
                     <button className='btn border-none btn-primary rounded-3xl bg-linear-to-r from-[#4F39F6] to-purple-600'>Get started</button>
                 </div>
