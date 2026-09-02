@@ -8,6 +8,7 @@ import { useState } from 'react'
 import StepSection from './Components/Banner/StepSection'
 import TransparentPricing from './Components/Banner/TransparentPricing'
 import WorkPart from './Components/Banner/WorkPart'
+import Footer from './Components/Banner/Footer'
 
 const fetchProducts = async () => {
   const res = await fetch("/products.json");
@@ -36,6 +37,7 @@ function App() {
         <TransparentPricing fetchPromise={fetchPromise}></TransparentPricing>
       </Suspense>
       <WorkPart></WorkPart>
+      <Footer></Footer>
     </>
   )
 }
