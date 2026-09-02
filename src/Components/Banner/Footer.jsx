@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Workflow = () => {
+const Footer = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
 
-export default Workflow;
+export default Footer;

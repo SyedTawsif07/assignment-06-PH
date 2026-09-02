@@ -7,6 +7,7 @@ import PremiumDigi from './Components/Banner/PremiumDigi'
 import { useState } from 'react'
 import StepSection from './Components/Banner/StepSection'
 import TransparentPricing from './Components/Banner/TransparentPricing'
+import WorkPart from './Components/Banner/WorkPart'
 
 const fetchProducts = async () => {
   const res = await fetch("/products.json");
@@ -34,7 +35,7 @@ function App() {
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         <TransparentPricing fetchPromise={fetchPromise}></TransparentPricing>
       </Suspense>
-      <Worklet></Worklet>
+      <WorkPart></WorkPart>
     </>
   )
 }
