@@ -9,7 +9,7 @@ import StepSection from './Components/Banner/StepSection'
 import TransparentPricing from './Components/Banner/TransparentPricing'
 import WorkPart from './Components/Banner/WorkPart'
 import Footer from './Components/Banner/Footer'
- import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const fetchProducts = async () => {
   const res = await fetch("/products.json");
