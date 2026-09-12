@@ -30,7 +30,11 @@ function App() {
       <Banner></Banner>
       <StatSection></StatSection>
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-        <PremiumDigi promiseFetchProducts={promiseFetchProducts} selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts}></PremiumDigi>
+        <PremiumDigi
+          promiseFetchProducts={promiseFetchProducts}
+          selectedProducts={selectedProducts}
+          setSelectedProducts={setSelectedProducts}
+        ></PremiumDigi>
       </Suspense>
       <StepSection></StepSection>
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>

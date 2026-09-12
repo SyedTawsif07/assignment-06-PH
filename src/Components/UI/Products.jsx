@@ -30,7 +30,9 @@ const Products = ({ product, selectedProducts, setSelectedProducts }) => {
                         <p className="text-xl"><span className='font-bold text-2xl'>${product.price}</span>/mo</p>
                         <ul>
                             {
-                                product.features.map((data, ind) => (<li key={ind} className="flex items-center gap-2 text-gray-500">
+                                product.features.map((data, ind) => (<li
+                                    key={ind}
+                                    className="flex items-center gap-2 text-gray-500">
                                     <MdDone className="text-green-500"></MdDone>
                                     <span>{data}</span>
                                 </li>))

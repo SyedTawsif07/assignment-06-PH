@@ -9,7 +9,17 @@ const Banner = () => {
 
                     {/* Left Content */}
                     <div className="w-full sm:w-full md:w-full lg:w-1/2 text-center lg:text-left">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF0FF] px-3 py-1.5">
+                            <span className="relative flex h-3 w-3 items-center justify-center">
+                                <span className="absolute h-3 w-3 rounded-full bg-purple-400 opacity-40 blur-[2px]"></span>
+                                <span className="relative h-2 w-2 rounded-full bg-[#7C3AED]"></span>
+                            </span>
+
+                            <span className="text-[13px] font-medium text-[#6938EF]">
+                                New: AI-Powered Tools Available
+                            </span>
+                        </div>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-5">
                             Supercharge Your
                             <span className="inline-block">
                                 Digital Workflow

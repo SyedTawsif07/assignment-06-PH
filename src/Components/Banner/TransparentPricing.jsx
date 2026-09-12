@@ -4,8 +4,7 @@ import { MdDone } from 'react-icons/md';
 
 const TransparentPricing = ({ fetchPromise }) => {
     const datas = use(fetchPromise);
-    const [btn, setBtn] = useState('get-started')
-    console.log(datas);
+    const [btn, setBtn] = useState('get-started');
     return (
         <div>
             <div className='p-5 sm:p-8 md:p-12 lg:p-20'>
@@ -21,8 +20,8 @@ const TransparentPricing = ({ fetchPromise }) => {
 
                 <div className="container mx-auto gap-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 
-                    {datas.map(data => (
-                        <div className={`w-full max-w-[400px] mx-auto card shadow-sm ${data.tag === "Most Popular" ? "text-white bg-gradient-to-r from-[#4F39F6] to-purple-600" : "bg-[#F9FAFC] text-gray-800"}`}>
+                    {datas.map((data, ind) => (
+                        <div key={ind} className={`w-full max-w-[400px] mx-auto card shadow-sm ${data.tag === "Most Popular" ? "text-white bg-gradient-to-r from-[#4F39F6] to-purple-600" : "bg-[#F9FAFC] text-gray-800"}`}>
 
                             <div className="card-body relative">
 
@@ -45,8 +44,8 @@ const TransparentPricing = ({ fetchPromise }) => {
                                 </div>
 
                                 <ul className="flex flex-col gap-1 text-xs">
-                                    {data.features.map(feature => (
-                                        <li className="flex items-center gap-2">
+                                    {data.features.map((feature,ind) => (
+                                        <li key={ind} className="flex items-center gap-2">
                                             <MdDone className="text-green-500"></MdDone>
                                             <span>{feature}</span>
                                         </li>
