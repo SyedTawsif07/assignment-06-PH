@@ -17,7 +17,7 @@ const fetchProducts = async () => {
 }
 
 const fetchDatas = async () => {
-  const res = await fetch("/public/transparentData.json")
+  const res = await fetch("/transparentData.json")
   return res.json();
 }
 

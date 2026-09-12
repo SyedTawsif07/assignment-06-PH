@@ -44,7 +44,7 @@ const TransparentPricing = ({ fetchPromise }) => {
                                 </div>
 
                                 <ul className="flex flex-col gap-1 text-xs">
-                                    {data.features.map((feature,ind) => (
+                                    {data.features.map((feature, ind) => (
                                         <li key={ind} className="flex items-center gap-2">
                                             <MdDone className="text-green-500"></MdDone>
                                             <span>{feature}</span>
