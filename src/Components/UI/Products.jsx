@@ -2,6 +2,7 @@ import React, { Profiler, useState } from 'react';
 import { MdDone } from 'react-icons/md';
 import writing from '../../../assets/products/writing.png';
 import resumeImg from '../../../assets/products/portfolio.png'
+import { toast } from 'react-toastify';
 
 const Products = ({ product, selectedProducts, setSelectedProducts }) => {
     const [isSelected, setIsSelected] = useState("false");
@@ -9,6 +10,7 @@ const Products = ({ product, selectedProducts, setSelectedProducts }) => {
     const handleBtn = () => {
         setBtn('done');
         setSelectedProducts([...selectedProducts, product]);
+        toast.success("Cart is selected");
     }
     return (
         <div>

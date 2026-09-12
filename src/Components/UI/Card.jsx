@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { toast } from 'react-toastify';
 
 const Card = ({ productData, selectedProducts, setSelectedProducts }) => {
 
@@ -11,6 +12,17 @@ const Card = ({ productData, selectedProducts, setSelectedProducts }) => {
     const total = selectedProducts.reduce((sum, product) => {
         return sum + product.price;
     }, 0);
+
+    const handleProceed = () => {
+        setSelectedProducts([]);
+
+        if(selectedProducts.length === 0){
+            toast.error("This section is already empty");
+        }
+        else{
+            toast.success("Proceed successful")
+        }
+    }
 
     return (
         <div>
@@ -47,7 +59,7 @@ const Card = ({ productData, selectedProducts, setSelectedProducts }) => {
                     <p>Total:</p>
                     <p className='font-bold text-2xl'>${total}</p>
                 </div>
-                <button className='btn rounded-full w-full bg-gradient-to-r from-[#4F39F6] to-purple-600 text-white'>Proceed to Checkout</button>
+                <button onClick={() => handleProceed()} className='btn rounded-full w-full bg-gradient-to-r from-[#4F39F6] to-purple-600 text-white'>Proceed to Checkout</button>
             </div>
 
 

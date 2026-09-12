@@ -4,9 +4,9 @@ import { FaShoppingCart } from "react-icons/fa";
 const Navbar = ({ selectedProducts }) => {
     return (
         <header>
-            <nav className='flex flex-col sm:flex-row justify-around items-center p-4 sm:p-5 border-b border-gray-200 gap-4 sm:gap-0'>
-
-                <div className='text-2xl sm:text-3xl font-bold bg-linear-to-r from-[#4F39F6] to-purple-600 bg-clip-text text-transparent'>
+            <nav className='fixed top-0 w-full z-50 bg-white'>
+                <div className=' flex flex-col sm:flex-row justify-around items-center p-4 sm:p-5 border-b border-gray-200 gap-4 sm:gap-0'>
+                    <div className='text-2xl sm:text-3xl font-bold bg-linear-to-r from-[#4F39F6] to-purple-600 bg-clip-text text-transparent'>
                     DigiTools
                 </div>
 
@@ -34,6 +34,7 @@ const Navbar = ({ selectedProducts }) => {
                     <button className='btn border-none btn-primary rounded-3xl bg-linear-to-r from-[#4F39F6] to-purple-600'>
                         Get started
                     </button>
+                </div>
                 </div>
 
             </nav>
